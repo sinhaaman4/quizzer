@@ -1,0 +1,3 @@
+<li><strong>Number of questions : </strong><?php echo $total;?></li>
+							<li><strong>Type : Multiple choice</strong></li>
+							<li><strong>Estimated time : <?php echo ($total * 0.5);?> minutes</strong></li>

@@ -38,7 +38,7 @@ $choice = mysqli_query($link,$query);
 	<head>
 		<title>PHP QUIZZER</title>
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-		<link rel="stylesheet" href="style1.css"/>
+		<link rel="stylesheet" href="new.css"/>
 		<script type="text/javascript">
 			var timeleft = <?php echo $total_time?>*60;
 		</script>
@@ -64,24 +64,15 @@ $choice = mysqli_query($link,$query);
 			
 		
 	</head>
-	<body onload="timeout()">
-		<div class="container">
-		<div class="col-md-12">
-			<div class="jumbotron">
-			<h1 align="center">PHP QUIZZER</h1>
-			</div>
-		</div>
-		</div>
+	<body onload="timeout()" background="books.jpg">
 		<main>
-		<h2><div id="time" class="col-md-4 col-md-offset-8"></div></h2>
+		<div id="time" class="col-md-2-text-left col-md-8"></div>
 			<div class="container">
-				<div class="col-md-4 col-md-offset-4">
-				<div class="current">
-						<h4>Question <?php echo $_SESSION['number'];?> of <?php echo $total;?></h4><br><br>
+				<div class="col-md-2-text-left col-md-8">
+				<div class="questions">
+						<h3>Question <?php echo $_SESSION['number'];?> of <?php echo $total;?></h3><br><br>
+						<font size="5px"><b><?php echo $question['text'];?></b><br></font>
 				</div>
-				<p class="questions">
-					<b><i><?php echo $question['text'];?></b></i><br>
-				</p>
 				<form method="post" id="action" action="process.php">
 					<ul class="list-group">
 						<?php while($row = mysqli_fetch_assoc($choice)):?> 

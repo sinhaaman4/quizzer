@@ -7,57 +7,53 @@
 		$password1 =$_POST['password1'];
 		$password2 =$_POST['password2'];
 		
+	if($username&&$email&&$password1&&$password2)
+	{
+		
 	if($password1==$password2)
 		{
 		$password1 = md5($password1);
 		$sql = "INSERT INTO register(username , email , password) VALUES('$username','$email','$password1')";
 		mysqli_query($link,$sql);
 		$_SESSION['username']=$username;
-		$_SESSION['message']="You have successfully registered";
-		echo $_SESSION['message'];
+		echo '<script language="javascript">';
+		echo 'alert("you have successfully registered")';
+		echo '</script>';
 		}
 	else{
 		$_SESSION['message']="The passwords do not match";
 		echo $_SESSION['message'];
 		}
 	}
+	else{
+		echo '<script language="javascript">';
+		echo 'alert("you have not filled all the details")';
+		echo '</script>';
+		}
+	}
 ?>
 <!DOCTYPE html>
 <html>
-<head>
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-</head>
-<body> 
-	<div id="centralise">
-		<div class="container">
-			<form method="post" action="register.php">
-				<div class="col-md-4 col-md-offset-4">
-				<div class="form-group"><br><br><br>
-					<label for="username">username:</label>
-					<input type="username" class="form-control" name="username" placeholder="Enter username">
-				</div>
-		
-				<div class="form-group">
-					<label for="email">Email:</label>
-					<input type="email" class="form-control" name="email" placeholder="Enter email id">
-				</div>
-			
-				<div class="form-group">
-					<label for="password1">Password:</label>
-					<input type="password" class="form-control" name="password1" placeholder="Enter password">
-				</div>
-		
-				<div class="form-group">
-					<label for="password2">Confirm Password:</label>
-					<input type="password" class="form-control" name="password2" placeholder="Enter password">
-				</div>
+	<head>
+	<link rel="stylesheet" type"text/css" href="new2.css"/>
+		<body>
+			<div class="registerbox">
+				<img src="avatar.png" class="avatar">
+					<h1>REGISTER HERE</h1>
+					<form method="post" action="register.php">
+						<p>username</p>
+						<input type="username" name="username" placeholder="Enter username">
+						<p>email</p>
+						<input type="email" name="email" placeholder="Enter email id">
+						<p>password</p>
+						<input type="password" name="password1" placeholder="Enter password">
+						<p>confirm password</p>
+						<input type="password" name="password2" placeholder="Enter password again">
 				
-				<button type="submit" class="btn btn-info" name="submit">register</button>
-				<a href="login.php" value="login" class="col-md-offset-6">login</a>
-				</div>
-			</form>	
-		</div>
-	</div>
-</body>
+						<input type="submit" name="submit">
+							<center><a href="login.php" value="login" style="color:red">Already registered?Click here to login</a></center>
+					</form>
+			</div>
+		</body>
+	</head>
 </html>
-	

@@ -7,12 +7,7 @@
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 		<link rel="stylesheet" href="style1.css">
 	</head>
-	<body>
-		<div class="container"align="center">
-			<div class="jumbotron">
-				<h1>PHP QUIZZER</h1>
-			</div>
-		</div>
+	<body background="final.jpg">
 		<main>
 			<div class="container"align="center">
 				<h1> <b>you are done!</b></h1><br>

@@ -28,25 +28,17 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-	<body>
-		<div class="container">
-		<form method="post" action="login.php">
-		<div class="form-group">
-			<div class="col-md-4 col-md-offset-4"><br><br><br>
-				<label for="username">username:</label>
-				<input type="username" class="form-control" name="username" placeholder="Enter username">
-			</div>
-			<div class="col-md-4 col-md-offset-4">
-				<label for="password1">Password:</label>
-				<input type="password" class="form-control" name="password1" placeholder="Enter password">
-			</div>
-			<div class="col-md-4 col-md-offset-4">
-				<div class="checkbox">
-					<label><input type="checkbox"> Remember me</label>
-				</div>
-				<button type="submit" class="btn btn-info" name="login">login</button>
-			</div>
+	<link rel="stylesheet" type"text/css" href="new2.css"/>
+		<body>
+			<div class="loginbox">
+				<img src="avatar.png" class="avatar">
+					<h1>LOGIN HERE</h1>
+					<form method="post" action="login.php">
+						<p>username</p>
+						<input type="username" name="username" placeholder="Enter username">
+						<p>password</p>
+						<input type="password" name="password1" placeholder="Enter password">
+						<button type="submit"  name="login">login</button>
 		</form>
 		</div>
 	</body>
